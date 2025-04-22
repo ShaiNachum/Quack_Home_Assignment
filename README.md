@@ -2,6 +2,27 @@
 
 A full-stack web application for managing support tickets with features for displaying, filtering, and updating ticket status.
 
+##Important Implementation Notes
+###Date Normalization
+The application includes date normalization functionality in the utils.js file. This ensures that all ticket creation dates are stored in a consistent ISO 8601 format (e.g., "2025-03-25T11:00:00Z") regardless of the input format. This normalization:
+
+* Handles different date input formats (ISO strings, date objects, human-readable strings).
+* Validates date inputs and falls back to the current date for invalid formats.
+* Ensures consistent date sorting and filtering throughout the application.
+* Improves the user experience by displaying dates in a uniform way.
+
+###Status Normalization
+Status values are normalized through the normalizeStatus function in utils.js. This ensures that ticket statuses are always stored in a consistent format even if they are entered with variations. The normalization:
+
+* Converts all status strings to lowercase.
+* Removes extra spaces and normalizes spacing.
+* Handles variations like "O P E N" being correctly mapped to "open".
+* Validates against a predefined list of allowed statuses.
+* Ensures consistent filtering and status updates throughout the application.
+
+These normalizations are applied during database seeding and whenever a ticket status is updated, ensuring data consistency throughout the application lifecycle.
+
+
 ## Table of Contents
 
 - [Overview](#overview)

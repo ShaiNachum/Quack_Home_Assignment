@@ -3,7 +3,7 @@ export const normalizeStatus = (status) => {
   if (!status) return "unknown";
   
   // Define valid statuses
-  const validStatuses = ['open', 'closed', 'pending', 'resolved'];
+  const validStatuses = ['open', 'closed', 'pending', 'resolved', 'in progress'];
   
   // Remove extra spaces and convert to lowercase
   const normalized = status.replace(/\s+/g, ' ').trim().toLowerCase();
@@ -28,6 +28,7 @@ export const normalizeDate = (dateStr) => {
   
   let date;
   try {
+    // Try to parse the date
     date = new Date(dateStr);
     
     // Check if date is valid

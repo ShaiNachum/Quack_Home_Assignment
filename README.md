@@ -2,6 +2,9 @@
 
 A full-stack web application for managing support tickets with features for displaying, filtering, and updating ticket status.
 
+### Demo video
+[Demo_Video.zip](https://github.com/user-attachments/files/19861719/Demo_Video.zip)
+
 ## Important Implementation Notes
 ### Date Normalization
 The application includes date normalization functionality in the utils.js file. This ensures that all ticket creation dates are stored in a consistent ISO 8601 format (e.g., "2025-03-25T11:00:00Z") regardless of the input format. This normalization:
